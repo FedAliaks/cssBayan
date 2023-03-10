@@ -2,42 +2,70 @@
   background-color: bisque;
 }
 
-.wrapper {
-  width: 60%;
-  margin: 0 auto;
-}
-
 .mem-title{
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.image {
-  display: block;
-  margin: 0 auto;
-  width: 60%;
+  border-bottom: 2px solid black;
 }
 
 .input {
   opacity: 0;
 }
 
-
-
-h1 {
-  color: red;
-}
-
 .svg-close{
-  width: 28px;
-  height: 28px;
-}
-
-.title {
-  font-size: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
 .svg-close{
   transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 320px) {
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .image {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+}
+
+@media screen and (min-width: 820px) {
+  .wrapper {
+    width: 75%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .image {
+    width: 75%;
+  }
+
+}
+
+@media screen and (min-width: 1920px) {
+  .wrapper {
+    width: 60%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .image {
+    width: 60%;
+  }
+
 }

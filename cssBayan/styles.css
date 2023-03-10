@@ -1,3 +1,43 @@
+.body {
+  background-color: bisque;
+}
+
+.wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.mem-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.input {
+  opacity: 0;
+}
+
+
+
 h1 {
   color: red;
+}
+
+.svg-close{
+  width: 28px;
+  height: 28px;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.svg-close{
+  transform: rotate(-45deg);
 }

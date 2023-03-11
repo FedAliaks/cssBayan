@@ -148,7 +148,7 @@
   } */
 
   .mem-section:hover .image,
-  .input:checked ~ .image{
+  .input:checked ~ label .image{
     width: 40%;
   }
 

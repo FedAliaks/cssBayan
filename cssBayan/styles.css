@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.5rem;
   border-bottom: 2px solid black;
 }
 
@@ -22,7 +23,12 @@
 }
 
 .svg-close{
+  transition: all .5s;
   transform: rotate(-45deg);
+}
+
+.input:checked ~ .mem-title .svg-close {
+  transform: rotate(0deg);
 }
 
 @media screen and (min-width: 320px) {
@@ -39,8 +45,20 @@
     display: block;
     margin: 0 auto;
     width: 0%;
+    transition: all 1s;
 /*     width: 90%; */
   }
+
+  .mem-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .mem-section:hover .image {
+    width: 70%;
+  }
+
+
 
 }
 
@@ -65,6 +83,10 @@
 /*     width: 75%; */
   }
 
+  .mem-section:hover .image {
+    width: 55%;
+  }
+
 }
 
 @media screen and (min-width: 1920px) {
@@ -78,6 +100,15 @@
 
   .image {
 /*     width: 60%; */
+  }
+
+  .mem-section:hover .image,
+  .input:checked ~ .image{
+    width: 40%;
+  }
+
+  .mem-section:hover .svg-close {
+    transform: rotate(0deg);
   }
 
 }

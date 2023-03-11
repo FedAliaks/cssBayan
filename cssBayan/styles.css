@@ -61,6 +61,10 @@
     cursor: pointer;
   }
 
+  .wrapper:hover .mem-section label {
+    cursor: pointer;
+  }
+
 
   .input:not(:checked) ~ .mem-title .title {
     color:blueviolet;

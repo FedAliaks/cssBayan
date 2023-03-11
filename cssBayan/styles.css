@@ -27,9 +27,25 @@
   transform: rotate(-45deg);
 }
 
+.svg {
+  fill: black;
+}
+
 .input:checked ~ .mem-title .svg-close {
   transform: rotate(0deg);
 }
+
+.mem-section:active .mem-title .title {
+  color: blueviolet;
+}
+
+
+.mem-section:active .image {
+  opacity: 0.5;
+}
+
+
+
 
 @media screen and (min-width: 320px) {
   .wrapper {
@@ -39,6 +55,7 @@
 
   .title {
     font-size: 1rem;
+    transition: all .5s;
   }
 
   .image {

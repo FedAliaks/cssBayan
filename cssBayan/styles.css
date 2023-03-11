@@ -112,6 +112,11 @@
 
 /* part 3.2 */
 
+.mem-section:hover .image,
+.input:checked ~ label .image{
+  width: 70%;
+}
+
 
 
 
@@ -132,9 +137,10 @@
     width: 75%;
   }
  */
-  .mem-section:hover .image {
-    width: 55%;
-  }
+ .mem-section:hover .image,
+ .input:checked ~ label .image{
+   width: 55%;
+ }
 
 }
 

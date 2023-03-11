@@ -83,30 +83,28 @@
   }
 
 
+/*   part 2 */
+
+
+.mem-section:hover .image {
+  width: 70%;
+}
   
 
-/*   .wrapper:hover .mem-section .mem-title .title {
-    color: black;
-  }
+/* part 3.1 */
 
+.mem-section:active .image {
+  opacity: 0.5;
+}
 
+.mem-section:active .mem-title .close {
+  background-color: blueviolet;
+}
 
+.mem-section:hover:active .mem-title .title {
+  color: blueviolet;
+}
 
-
-  .mem-section:hover .image {
-    width: 70%;
-  }
-
-
-  
-  .mem-section:active .mem-title .title {
-    color: blueviolet;
-  }
-
-  .mem-section:active .image {
-    opacity: 0.5;
-  }
- */
 
 
 }

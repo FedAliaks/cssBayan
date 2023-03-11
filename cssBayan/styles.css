@@ -14,22 +14,6 @@
   opacity: 0;
 }
 
-.svg-close{
-  width: 1.75rem;
-  height: 1.75rem;
-
-  opacity: 0;
-  transition: all .5s;
-}
-
-.svg-close{
-  transition: all .5s;
-  transform: rotate(-45deg);
-}
-
-.svg {
-  fill: black;
-}
 
 
 
@@ -45,6 +29,16 @@
   .title {
     font-size: 1rem;
     transition: all .5s;
+  }
+
+  .close {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: black;
+    transition: all .5s;
+    transform: rotate(45deg);
+    opacity: 0;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
   }
 
   .image {
@@ -67,15 +61,16 @@
     cursor: pointer;
   }
 
+
   .input:not(:checked) ~ .mem-title .title {
     color:blueviolet;
   }
 
-  .wrapper:hover .svg-close {
+  .wrapper:hover .close{
     opacity: 1;
   }
 
-  .mem-section:hover .svg-close {
+  .mem-section:hover .close {
     transform: rotate(0deg);
   }
 
@@ -83,7 +78,7 @@
     color: black;
   }
 
-  .input:checked ~ .mem-title .svg-close {
+  .input:checked ~ .mem-title .close {
     transform: rotate(0deg);
   }
 

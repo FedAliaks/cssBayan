@@ -31,18 +31,7 @@
   fill: black;
 }
 
-.input:checked ~ .mem-title .svg-close {
-  transform: rotate(0deg);
-}
 
-.mem-section:active .mem-title .title {
-  color: blueviolet;
-}
-
-
-.mem-section:active .image {
-  opacity: 0.5;
-}
 
 
 
@@ -71,10 +60,58 @@
     flex-direction: column-reverse;
   }
 
+
+/*   Part 1 */
+
+  .wrapper:hover {
+    cursor: pointer;
+  }
+
+  .input:not(:checked) ~ .mem-title .title {
+    color:blueviolet;
+  }
+
+  .wrapper:hover .svg-close {
+    opacity: 1;
+  }
+
+  .mem-section:hover .svg-close {
+    transform: rotate(0deg);
+  }
+
+  .wrapper:hover .mem-section .mem-title .title {
+    color: black;
+  }
+
+  .input:checked ~ .mem-title .svg-close {
+    transform: rotate(0deg);
+  }
+
+
+  
+
+/*   .wrapper:hover .mem-section .mem-title .title {
+    color: black;
+  }
+
+
+
+
+
   .mem-section:hover .image {
     width: 70%;
   }
 
+
+  
+  .mem-section:active .mem-title .title {
+    color: blueviolet;
+  }
+
+  .mem-section:active .image {
+    opacity: 0.5;
+  }
+ */
 
 
 }
@@ -84,13 +121,7 @@
     width: 75%;
   }
 
-  .wrapper:hover {
-    cursor: pointer;
-  }
 
-  .wrapper:hover .svg-close {
-    opacity: 1;
-  }
 
   .title {
     font-size: 1.5rem;
@@ -124,8 +155,6 @@
     width: 40%;
   }
 
-  .mem-section:hover .svg-close {
-    transform: rotate(0deg);
-  }
+
 
 }

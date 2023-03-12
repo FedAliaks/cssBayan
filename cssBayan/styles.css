@@ -7,16 +7,12 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
-  border-bottom: 2px solid black;
+  border-bottom: 0.15rem solid black;
 }
 
 .input {
   opacity: 0;
 }
-
-
-
-
 
 
 
@@ -46,10 +42,14 @@
     margin: 0 auto;
     width: 0%;
     transition: all 1s;
-/*     width: 90%; */
   }
 
   .mem-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mem-label {
     display: flex;
     flex-direction: column-reverse;
   }
@@ -57,67 +57,73 @@
 
 /*   Part 1 */
 
-  .wrapper:hover {
-    cursor: pointer;
+
+  @media (hover: hover) {
+    .wrapper:hover {
+      cursor: pointer;
+    }
+
+    .wrapper:hover .mem-section label {
+      cursor: pointer;
+    }
+
+    .wrapper:hover .close{
+      opacity: 1;
+    }
+
+    .mem-section:hover .close {
+      transform: rotate(0deg);
+    }
+
+    .wrapper:hover .mem-section .mem-label .mem-title .title {
+      color: black;
+    }
   }
 
-  .wrapper:hover .mem-section label {
-    cursor: pointer;
-  }
-
-
-  .input:not(:checked) ~ .mem-title .title {
+  .input:not(:checked) ~ .mem-label .mem-title .title {
     color:blueviolet;
-  }
-
-  .wrapper:hover .close{
-    opacity: 1;
-  }
-
-  .mem-section:hover .close {
-    transform: rotate(0deg);
-  }
-
-  .wrapper:hover .mem-section .mem-title .title {
-    color: black;
   }
 
   .input:checked ~ .mem-title .close {
     transform: rotate(0deg);
   }
 
+  /*   part 2 */
 
-/*   part 2 */
+  @media (hover: hover) {
+    .mem-section:hover .image {
+      width: 70%;
+    }
+  }
 
+  /* part 3.1 */
 
-.mem-section:hover .image {
-  width: 70%;
-}
+  .mem-section:active .image {
+    opacity: 0.5;
+  }
 
+  .mem-section:active .mem-title .close {
+    background-color: blueviolet;
+  }
 
-/* part 3.1 */
-
-.mem-section:active .image {
-  opacity: 0.5;
-}
-
-.mem-section:active .mem-title .close {
-  background-color: blueviolet;
-}
-
-.mem-section:hover:active .mem-title .title {
-  color: blueviolet;
-}
-
-
-/* part 3.2 */
-
-.mem-section:hover .image,
-.input:checked ~ label .image{
-  width: 70%;
-}
+  @media (hover: hover) {
+    .mem-section:hover:active .mem-label .mem-title .title {
+      color: blueviolet;
+    }
+  }
 
 
+  /* part 3.2 */
+
+  @media (hover: hover) {
+    .mem-section:hover .image {
+      width: 70%;
+    }
+  }
+
+  .input:checked ~ label .image {
+    width: 70%;
+  }
 
 
 }
@@ -127,41 +133,43 @@
     width: 75%;
   }
 
-
-
   .title {
     font-size: 1.5rem;
   }
 
-/*   .image {
-    width: 75%;
-  }
- */
- .mem-section:hover .image,
- .input:checked ~ label .image{
-   width: 55%;
- }
+  @media (hover: hover) {
+      .mem-section:hover .image {
+      width: 55%;
+    }
 
-}
 
-@media screen and (min-width: 1920px) {
-  .wrapper {
-    width: 60%;
-  }
 
-  .title {
-    font-size: 2rem;
-  }
 
-/*   .image {
-    width: 60%;
-  } */
-
-  .mem-section:hover .image,
   .input:checked ~ label .image{
-    width: 40%;
+    width: 55%;
   }
 
+  }
 
+  @media screen and (min-width: 1920px) {
+    .wrapper {
+      width: 60%;
+    }
+
+    .title {
+      font-size: 2rem;
+    }
+
+      @media (hover: hover) {
+        .mem-section:hover .image {
+        width: 40%;
+      }
+    }
+
+    .input:checked ~ label .image{
+      width: 40%;
+    }
+
+  }
 
 }
